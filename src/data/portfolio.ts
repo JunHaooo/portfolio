@@ -1,15 +1,15 @@
 export const personalInfo = {
-  name: "Jun Hao Low",
-  tagline: "Software Engineer & CS Student",
-  bio: "A passionate computer science student with hands-on experience in full-stack development. I enjoy building elegant solutions to complex problems and am always eager to learn new technologies.",
-  email: "junhao@example.com",
+  name: "Low Jun Hao",
+  tagline: "Software Engineer & CS Student at NTU",
+  bio: "Computer Science undergraduate at NTU's Renaissance Engineering Programme, pursuing a dual BSc in CS and MSc in Technology Management. I build full-stack applications and data pipelines, with experience spanning government digital infrastructure, autonomous systems, and AI-powered tools.",
+  email: "jlow115@e.ntu.edu.sg",
   location: "Singapore",
   profileImage: "/images/profile.jpg",
   resumeUrl: "/resume.pdf",
   socials: {
-    github: "https://github.com/junhao",
-    linkedin: "https://linkedin.com/in/junhao",
-    email: "mailto:junhao@example.com",
+    github: "https://github.com/JunHaooo",
+    linkedin: "https://www.linkedin.com/in/jun-hao-low-1b7346246/",
+    email: "mailto:jlow115@e.ntu.edu.sg",
   },
 };
 
@@ -32,27 +32,28 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Software Engineering Intern",
-    company: "Tech Company",
+    title: "Software Engineer Intern",
+    company: "GovTech - Digital Economy Products (TradeNet Rebuild)",
     location: "Singapore",
-    period: "May 2025 – Aug 2025",
+    period: "May 2026 – Present",
     description: [
-      "Developed and maintained RESTful APIs serving 10,000+ daily requests",
-      "Collaborated with a cross-functional team of 5 engineers on microservices architecture",
-      "Implemented automated testing pipeline reducing bug reports by 30%",
+      "Engineered a Python data-masking pipeline for TradeNet XML/JSON schemas, implementing Format-Preserving Encryption (FPE/FF1) to ensure PII compliance for UAT testing",
+      "Designed a deterministic tokenization layer using deferred execution callbacks, maintaining cross-file relational integrity with zero hash collisions across enterprise datasets",
+      "Optimized DevEx tooling by implementing stateless idempotency into Git Merge Request automation and deploying static analysis guardrails for an internal AI spec-generation harness",
     ],
-    technologies: ["TypeScript", "Node.js", "PostgreSQL", "Docker"],
+    technologies: ["Python", "Git", "XML/JSON", "CI/CD"],
   },
   {
-    title: "Teaching Assistant",
-    company: "University",
+    title: "Software Intern",
+    company: "LTA Centre for Autonomous Mobility",
     location: "Singapore",
-    period: "Jan 2025 – Apr 2025",
+    period: "Aug 2025",
     description: [
-      "Conducted weekly lab sessions for 30+ students in Data Structures & Algorithms",
-      "Designed and graded programming assignments and exams",
+      "Built a full-stack article retrieval system using a Next.js frontend and a Python FastAPI RAG backend to enable semantic search and chat-based querying",
+      "Implemented article ingestion from public URLs, extracting metadata and generating embeddings stored in MongoDB and ChromaDB for persistent vector retrieval",
+      "Developed user-facing workflows for article upload, preview, and interactive exploration, supporting rapid prototyping in a local development environment",
     ],
-    technologies: ["Java", "Python", "Algorithms"],
+    technologies: ["Next.js", "Python", "FastAPI", "MongoDB", "ChromaDB"],
   },
 ];
 
@@ -67,38 +68,32 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Risk Metric and Portfolio Analysis Tool",
     description:
-      "A full-stack e-commerce application with user authentication, product catalog, shopping cart, and payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/junhao/ecommerce",
-    liveUrl: "https://ecommerce-demo.vercel.app",
+      "Built a system providing real-time insights into financial portfolios, helping users understand risks and make informed investment decisions. Developed a RESTful API backed by PostgreSQL and optimized with caching via DuckDB. Contributed to CI/CD workflow using GitHub Actions for automated deployment to AWS EC2.",
+    technologies: ["PostgreSQL", "DuckDB", "GitHub Actions", "AWS EC2", "RESTful APIs"],
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "Geo-Regulation AI Compliance System",
     description:
-      "A collaborative task management tool with real-time updates, drag-and-drop interface, and team workspaces.",
-    technologies: ["Next.js", "TypeScript", "Prisma", "WebSocket"],
-    githubUrl: "https://github.com/junhao/taskmanager",
+      "Created an AI-powered tool that helps companies automatically analyze and comply with global content regulations in real time. Designed a multi-agent system using Python, FastAPI, and multiple LLMs (Gemini, Claude, GPT) integrated through a RAG pipeline for policy reasoning. Built an interactive Streamlit dashboard for real-time compliance visualization.",
+    technologies: ["Python", "FastAPI", "LLMs", "RAG", "Streamlit"],
     featured: true,
   },
   {
-    title: "ML Image Classifier",
+    title: "Autonomous Agent with Reinforcement Learning",
     description:
-      "A machine learning model that classifies images into 50+ categories with 94% accuracy, deployed as a web API.",
-    technologies: ["Python", "TensorFlow", "Flask", "Docker"],
-    githubUrl: "https://github.com/junhao/image-classifier",
+      "Developed an autonomous AI agent that learned to navigate a complex multi-agent maze, making real-time decisions under partial observability. Improved agent performance through custom reward shaping, exploration tuning, and policy evaluation strategies.",
+    technologies: ["Python", "Reinforcement Learning", "Flask"],
     featured: true,
   },
   {
-    title: "Portfolio Website",
+    title: "SecureaTix - Blockchain Ticketing Platform",
     description:
-      "This portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive with dark mode support.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/junhao/portfolio",
-    liveUrl: "https://junhao.vercel.app",
-    featured: false,
+      "1st Place, NTU Port63 Challenge. Engineered a blockchain-based ticketing system to combat concert ticket scams by issuing secure, verifiable NFT tickets. Deployed smart contracts via Hardhat on XRP Ledger's EVM Sidechain Testnet with Stripe and PayNow fiat payment support.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Hardhat", "XRP Ledger", "Stripe"],
+    featured: true,
   },
 ];
 
@@ -109,26 +104,23 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    category: "Languages",
-    skills: ["TypeScript", "JavaScript", "Python", "Java", "C++", "SQL"],
+    category: "Programming Languages",
+    skills: ["Python", "Java", "JavaScript", "SQL"],
   },
   {
-    category: "Frameworks",
-    skills: ["React", "Next.js", "Node.js", "Express", "Flask", "TailwindCSS"],
+    category: "Frontend",
+    skills: ["React", "Next.js", "Tailwind CSS"],
   },
   {
-    category: "Tools & Platforms",
-    skills: ["Git", "Docker", "AWS", "Vercel", "PostgreSQL", "MongoDB"],
+    category: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "Java Spring Boot", "RESTful APIs"],
   },
   {
-    category: "Concepts",
-    skills: [
-      "REST APIs",
-      "System Design",
-      "CI/CD",
-      "Agile",
-      "Data Structures",
-      "Algorithms",
-    ],
+    category: "Databases",
+    skills: ["PostgreSQL", "MySQL"],
+  },
+  {
+    category: "DevOps & Tools",
+    skills: ["Docker", "Git"],
   },
 ];

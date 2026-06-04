@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
 import { personalInfo } from "@/data/portfolio";
@@ -17,12 +18,14 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
           <div className="mb-6">
-            <div className="w-32 h-32 mx-auto rounded-full bg-muted border-4 border-primary/20 flex items-center justify-center text-4xl font-bold text-primary">
-              {personalInfo.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </div>
+            <Image
+              src={personalInfo.profileImage}
+              alt={personalInfo.name}
+              width={128}
+              height={128}
+              className="mx-auto rounded-full border-4 border-primary/20 object-cover w-32 h-32"
+              priority
+            />
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4">
